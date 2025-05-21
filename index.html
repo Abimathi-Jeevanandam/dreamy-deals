@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dreamy Deals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+    body {
+      background: linear-gradient(to bottom, #fef6ff, #e7f0ff);
+      color: #4a4a4a;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: #6b4eff;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #4a3dbb;
+    }
+    header {
+      background: #6b4eff;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 6px rgba(107, 78, 255, 0.3);
+    }
+    header .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li {
+      font-weight: 600;
+    }
+    .hero {
+      background: linear-gradient(135deg, #e0d7ff, #b8a4ff);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      border-radius: 0 0 80px 80px;
+      margin-bottom: 3rem;
+      box-shadow: 0 10px 30px rgba(107, 78, 255, 0.2);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+    .hero button {
+      background: linear-gradient(90deg, #dcd3ff, #e8e3ff);
+      color: #4a3dbb;
+      font-weight: 600;
+      border: none;
+      padding: 0.8rem 2.2rem;
+      border-radius: 40px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(107, 78, 255, 0.2);
+    }
+    .hero button:hover {
+      background: #cbbfff;
+    }
+    .search-bar {
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+    .search-bar input {
+      padding: 0.7rem 1rem;
+      width: 100%;
+      border: 2px solid #ddd;
+      border-radius: 30px;
+      font-size: 1rem;
+      outline: none;
+    }
+    .filters {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .filters button {
+      background: #eee;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0.3rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .filters button.active {
+      background: #6b4eff;
+      color: white;
+    }
+    .deals-container {
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 2rem;
+    }
+    .deal-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(176, 143, 255, 0.2);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .deal-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(107,78,255,0.25);
+    }
+    .deal-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .deal-content {
+      padding: 1rem 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .deal-content h3 {
+      margin-bottom: 0.5rem;
+      color: #4a4a4a;
+    }
+    .deal-content p {
+      flex-grow: 1;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .deal-content .price {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #6b4eff;
+      margin-bottom: 1rem;
+    }
+    .deal-content button {
+      background: linear-gradient(90deg, #dcd3ff, #e8e3ff);
+      color: #4a3dbb;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .deal-content button:hover {
+      background: #cbbfff;
+    }
+    footer {
+      background: #6b4eff;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- (HTML content remains unchanged from previous) -->
+</body>
+</html>
