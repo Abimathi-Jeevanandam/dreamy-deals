@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Get exclusive discounts on fashion, gadgets, and more with Dreamy Deals. Your one-stop shop for magical offers." />
+  <meta name="keywords" content="deals, discounts, fashion sale, gadget offers, online shopping" />
+  <meta name="author" content="Dreamy Deals Team" />
+  <title>Dreamy Deals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* [Original CSS remains unchanged] */
+    /* ... CSS code ... */
+    header img.logo-img {
+      height: 50px;
+      margin-right: 1rem;
+    }
+    header .logo-text {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+    }
+    header .logo-wrapper {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-wrapper">
+      <img src="A_logo_for_\"Dreamy_Deals\"_features_an_illustration.png" alt="Dreamy Deals Logo" class="logo-img" />
+      <div class="logo-text">Dreamy Deals</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Dreamy Deals</h1>
+    <p>Discover magical discounts and exclusive offers tailored just for you!</p>
+    <button>Explore Now</button>
+  </section>
+
+  <section class="homepage">
+    <h2>Why Shop With Dreamy Deals?</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>Curated Deals</h3>
+        <p>We hand-pick top deals to save you time and money.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Trusted Brands</h3>
+        <p>We partner with leading brands you already love.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Fast Delivery</h3>
+        <p>Enjoy quick and reliable shipping on every order.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="deals-container">
+    <div class="deal-card">
+      <img src="https://source.unsplash.com/400x200/?shopping" alt="Gadget Sale" loading="lazy">
+      <div class="deal-content">
+        <h3>Exclusive Gadget Sale</h3>
+        <p>Get up to 50% off on latest tech and accessories.</p>
+        <div class="price">$199 only</div>
+        <button>Grab Deal</button>
+      </div>
+    </div>
+    <div class="deal-card">
+      <img src="https://source.unsplash.com/400x200/?fashion" alt="Fashion Picks" loading="lazy">
+      <div class="deal-content">
+        <h3>Trendy Fashion Picks</h3>
+        <p>Stay stylish with top picks from premium brands.</p>
+        <div class="price">Flat 40% Off</div>
+        <button>Shop Now</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Dreamy Deals. All rights reserved.
+  </footer>
+
+  <script>
+    const filterButtons = document.querySelectorAll(".filters button");
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
